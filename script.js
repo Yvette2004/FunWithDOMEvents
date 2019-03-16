@@ -8,18 +8,23 @@ function move(){
 }
 //challenge 1
 let removeText = document.getElementById("challenge-one");
-let body = document.getElementByTagName("body")[0];
+let bodyElements = document.getElementsByTagName("body");
+let body = document.getElementByTagName("body");
+let body = bodyElements[0];
+
 removeText.addEventListener("dblclick", ifClicked);
+
 function ifClicked(){
 	body.removeChild(removeText);
 }
 playBtn.addEventListener("mouseover", hover);
+
 function hover(){
-	playBtn.style.backgroundColor= "blue";
+	playBtn.style.backgroundColor = "blue";
 }
 
 let title = document.getElementById("page-title")
 title.addEventListener("copy",copy);
 function copy(){
-	alert("STOP")
+	alert("STOP");
 }
